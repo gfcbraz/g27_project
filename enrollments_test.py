@@ -1,14 +1,13 @@
 # -*- coding: utf-8 -*-
 """
-@author: António Brito / Carlos Bragança
-(2024)
-#objective: Teste da classe Person
+@author: Gonçalo Braz
+#objective: Teste da classe Enrollments
 """
 # Importa a classe 'Enrollments' que se encontra na pasta 'classes'
 from classes.Enrollments import Enrollments
 
 # Lê os dados da classe Enrollments
-Enrollments.read("data/")
+Enrollments.read("data/Research.db")
 
 # Percorre os objetos do primeiro ao último
 print("\nprimeiro->último:")
@@ -25,8 +24,8 @@ while p1 != None:
     p1 = Enrollments.previous()
 
 # Cria um novo objeto Enrollments
-print("\nEnrollment com o código '555' criada:")
-p1 = Enrollments('555', '200', '30', '2025-02-12', 'Yes', 'Active')
+print("\nEnrollment com o código 1555 criada:")
+p1 = Enrollments(1555, 200, 27, '12/02/2025', 'Yes', 'Active')
 print(p1)
 
 # Percorre os objetos usando as variáveis de classe 'obj' e 'lst'
@@ -36,13 +35,13 @@ for codigo in Enrollments.lst:
     print(p1)
 
 # Acede ao objeto cujo código é 555
-print("\nEnrollment com o código '555':")
-p1 = Enrollments.obj['555']
+print("\nEnrollment com o código 1555:")
+p1 = Enrollments.obj[1555]
 print(p1)
 
-# Apaga a o objeto enrollments com o código '555'
-print("\nEnrollment com o código 555 removida")
-Enrollments.remove('555')
+# Apaga a o objeto enrollments com o código '1555'
+print("\nEnrollment com o código 1555 removida")
+Enrollments.remove(1555)
 
 # Percorre os objetos usando a variável de classe 'obj'
 print("\nVariável de classe 'obj':")
@@ -50,4 +49,4 @@ for p1 in Enrollments.obj.values():
     print(p1)
 
 # Escreve os dados da classe Enrollments
-Enrollments.write("data/")
+Enrollments.write("data/Research.db")

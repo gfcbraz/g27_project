@@ -24,7 +24,7 @@ class Enrollments(Gclass):
         self._id = id
         self._participant_id = participant_id
         self._study_id = study_id
-        self._enrollment_date = datetime.date.fromisoformat(enrollment_date)
+        self._enrollment_date = datetime.datetime.strptime(enrollment_date, '%d/%m/%Y').date()
         self._consent_status = consent_status
         self._status = status
         # Add the new object to the dictionary of objects
@@ -73,7 +73,6 @@ class Enrollments(Gclass):
     @status.setter
     def status(self, status):
         self._status = status
-
 
 
 

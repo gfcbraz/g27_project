@@ -25,47 +25,44 @@ class Studies(Gclass):
         self._id = id
         self._title = title
         self._field = field
-        self._start_date = datetime.date.fromisoformat(start_date)
+        self._start_date = datetime.datetime.strptime(start_date, '%d/%m/%Y').date()
         self._center_id = center_id
         # Add the new object to the dictionary of objects
         Studies.obj[id] = self
         # Add the id to the list of object ids
         Studies.lst.append(id)
-    # id property getter method
+
     @property
     def id(self):
         return self._id
     @id.setter
     def id(self, id):
         self._id = id
-    # title property getter method
+
     @property
     def title(self):
         return self._title
     @title.setter
     def title(self, title):
         self._title = title
-    # field property getter method
+
     @property
     def field(self):
         return self._field
-    # field property setter method
     @field.setter
     def field(self, field):
         self._field = field
-    # start date property getter method
+
     @property
     def start_date(self):
         return self._start_date
-    # start date property setter method
     @start_date.setter
     def start_date(self, start_date):
         self._start_date = start_date
-    # center id property getter method
+
     @property
     def center_id(self):
         return self._center_id
-    # center id property setter method
     @center_id.setter  
     def center_id(self, center_id):
         self._center_id = center_id
