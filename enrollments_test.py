@@ -4,7 +4,7 @@
 #objective: Teste da classe Enrollments
 """
 # Importa a classe 'Enrollments' que se encontra na pasta 'classes'
-from classes.Enrollments import Enrollments
+from classes.enrollments import Enrollments
 
 # Lê os dados da classe Enrollments
 Enrollments.read("data/Research.db")

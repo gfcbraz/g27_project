@@ -4,7 +4,7 @@
 #objective: Teste da classe Participants
 """
 # Importa a classe 'Participants' que se encontra na pasta 'classes'
-from classes.Participants import Participants
+from classes.participants import Participants
 
 # Lê os dados da classe Participants
 Participants.read("data/Research.db")

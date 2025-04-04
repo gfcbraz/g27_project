@@ -4,7 +4,7 @@
 #objective: Teste da classe Center
 """
 # Importa a classe 'Center' que se encontra na pasta 'classes'
-from classes.Center import Center
+from classes.center import Center
 
 # Lê os dados da classe Center
 Center.read("data/Research.db")

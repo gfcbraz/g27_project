@@ -4,7 +4,7 @@
 #objective: Teste da classe Studies
 """
 # Importa a classe 'Studis' que se encontra na pasta 'classes'
-from classes.Studies import Studies
+from classes.studies import Studies
 
 # Lê os dados da classe Studies
 Studies.read("data/Research.db")
